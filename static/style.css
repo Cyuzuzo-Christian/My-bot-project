@@ -1,0 +1,135 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6; /* A soft, light background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    max-width: 900px;
+    width: 90%;
+    background: #ffffff; /* Main white background */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 700px;
+}
+
+.main-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.welcome-header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.chatbot-window {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.message {
+    padding: 12px 18px;
+    border-radius: 18px;
+    max-width: 80%;
+    line-height: 1.4;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: #e9ecef; /* Light gray for bot */
+    color: #333;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #007bff; /* Primary blue for user */
+    color: white;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #28a745; /* Green color accent */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Timer Section Styling */
+.timer-section {
+    flex: 1;
+    background-color: #f8f9fa; /* Off-white background for separation */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #eee;
+}
+
+.timer-display {
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 20px 0;
+    color: #007bff;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 10px;
+}
+
+#pause-btn {
+    background-color: #ffc107; /* Yellow color accent for pause */
+}
+
+#pause-btn:hover {
+    background-color: #e0a800;
+}
+
+#reset-btn {
+    background-color: #dc3545; /* Red color accent for reset */
+}
+
+#reset-btn:hover {
+    background-color: #c82333;
+}
+
+.session-counter {
+    margin-top: 15px;
+    font-weight: 600;
+}

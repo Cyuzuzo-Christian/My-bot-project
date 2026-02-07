@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Optimizer Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="welcome-header">
+            <h1>Welcome, Future Innovator!</h1>
+            <p>Your Study Optimizer Bot is here to help you achieve academic excellence.</p>
+        </header>
+        
+        <div class="main-content">
+            <!-- Chatbot Interface Area -->
+            <div class="chatbot-window" id="chat-window">
+                <!-- Messages will be injected here by JavaScript -->
+                <div class="message bot-message">Hello! I'm your Study Optimizer Bot. How can I help you focus today?</div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Type a command (e.g., 'start session', 'give me a tip')..." autofocus>
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+        <!-- Interactive Time Tracker Section -->
+        <div class="timer-section">
+            <h2>Focus Timer</h2>
+            <div class="timer-display" id="timer-display">25:00</div>
+            <div class="timer-controls">
+                <button id="start-btn" onclick="startTimer()">Start Session</button>
+                <button id="pause-btn" style="display: none;" onclick="pauseTimer()">Pause</button>
+                <button id="reset-btn" onclick="resetTimer()">Reset</button>
+            </div>
+            <p class="session-counter" id="session-counter">Sessions Completed Today: 0</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
