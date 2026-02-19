@@ -2,20 +2,11 @@
 Project: Study Optimizer Bot (Student Wellness Initiative)
 Author: Cyuzuzo Shami Set Christian
 Date: January 10, 2026
-Version: 1.0.0
 
 Description:
 This Python script powers a simple, rule-based chatbot designed to help students manage
 their study habits using techniques like the Pomodoro method. It tracks focus sessions
 and provides motivational tips to improve academic efficiency and mental wellness.
-
-Interests in Computer Science & AI:
-My journey into CS began with a passion for solving real-world problems through logic and automation.
-I am particularly fascinated by Natural Language Processing (NLP) and how conversational AI can be
-used ethically to improve daily life and education. This project is a practical application of
-data structuring and user experience (UX) design, an area I am eager to explore further at the
-university level.
-"""
 
 import time
 import json
@@ -49,7 +40,7 @@ def get_tip():
     """Cycles through study tips."""
     user_session['last_tip_index'] = (user_session['last_tip_index'] + 1) % len(STUDY_DB['tips'])
     tip = STUDY_DB['tips'][user_session['last_tip_index']]
-    return f"💡 **{tip['title']}**: {tip['summary']}"
+    return f"{tip['title']}**: {tip['summary']}"
 
 def run_pomodoro():
     """Simulates a Pomodoro session. This would be a real timer in a UI application."""
@@ -57,9 +48,9 @@ def run_pomodoro():
     break_duration = 5  # minutes
     
     # In a command line bot, we simulate the time passing:
-    print(f"🧠 Advisor Bot: Starting {study_duration}-minute focus session. Stay focused! (Simulated time passing...)")
+    print(f"Advisor Bot: Starting {study_duration}-minute focus session. Stay focused! (Simulated time passing...)")
     # time.sleep(study_duration * 60)
-    print(f"🎉 Advisor Bot: Session complete! Time for a {break_duration}-minute break.")
+    print(f"Advisor Bot: Session complete! Time for a {break_duration}-minute break.")
     
     user_session['focus_sessions_completed_today'] += 1
     count = user_session['focus_sessions_completed_today']
@@ -108,6 +99,7 @@ if __name__ == "__main__":
             break
         response = handle_input(user_input)
         print(f"Advisor Bot: {response}")
+
 
 
 
